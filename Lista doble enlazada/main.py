@@ -1,28 +1,23 @@
 from lista import Lista
-k = Lista()
-for dato in range(5):
-    k.agregarUltimo(dato)
+from random import randint
 
-print(f"Lista: {k}")
+l = Lista()
 
-k.agregarAntes(3, 5)
+for dato in range(6):
+    l.agregarPrimero(dato)
 
-print(f"Agregar 5 antes de 3: {k}")
+print(f"Lista actual: {l}")
 
-k.agregarDespues(2, 6)
+o = 0
 
-print(f"Agregar 6 despues de 2: {k}")
+while resp == 0:
+    print("Elge una opción:\n")
+    o = int(input("1.Eliminar primero\n2.Eliminar ultimo\n3. Agregar antes\n4. Agregar despues\n5.Buscar\n6. Eliminar\n7. Salir"))
 
-k.eliminarPrimero()
-
-print(f"Eliminar primero: {k}")
-
-k.eliminarUltimo()
-
-print(f"Eliminar ultimo: {k}")
-
-print(k.buscar(5))
-
-k.eliminar(2)
-
-print(k)
+    if o == 1:
+        l.eliminarPrimero()
+        print(f"Se eliminó el valor {} ")
+    elif o == 2:
+        l.eliminarUltimo()
+    elif 0 == 3:
+        a = 0
